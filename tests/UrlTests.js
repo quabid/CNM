@@ -53,6 +53,7 @@ exports.hasFtpProtocol = describe(
     );
   }
 );
+
 exports.hasFtpProtocol = describe(
   mInformation("Tests for the URLs module"),
   () => {
