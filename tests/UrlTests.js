@@ -94,9 +94,31 @@ exports.hasProtocol = describe(
 exports.addFtpProtocol = describe(
   mInformation('Tests for the URLs module'),
   () => {
-    describe(mFYI('Testing add FtpProtocol method'), () => {
+    describe(mFYI('Testing addFtpProtocol method'), () => {
       it(mWarning('Should pass'), () => {
         expect(hasFtpProtocol(addFtpProtocol(url4))).to.equal(true);
+      });
+    });
+  }
+);
+
+exports.addHttpProtocol = describe(
+  mInformation('Tests for the URLs module'),
+  () => {
+    describe(mFYI('Testing addHttpProtocol method'), () => {
+      it(mWarning('Should pass'), () => {
+        expect(hasHttpProtocol(addHttpProtocol(url4))).to.equal(true);
+      });
+    });
+  }
+);
+
+exports.addHttpsProtocol = describe(
+  mInformation('Tests for the URLs module'),
+  () => {
+    describe(mFYI('Testing addHttpsProtocol method'), () => {
+      it(mWarning('Should pass'), () => {
+        expect(hasHttpsProtocol(addHttpsProtocol(url4))).to.equal(true);
       });
     });
   }
