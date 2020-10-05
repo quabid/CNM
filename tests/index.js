@@ -1,3 +1,8 @@
-const { dummy, hasFtpProtocol, hasProtocol } = require('./UrlTests');
+const {
+  dummy,
+  hasFtpProtocol,
+  hasProtocol,
+  addFtpProtocol,
+} = require('./UrlTests');
 
 dummy;

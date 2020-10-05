@@ -13,6 +13,9 @@ const {
 } = require('../modules/Messages');
 const {
   addProtocol,
+  addFtpProtocol,
+  addHttpProtocol,
+  addHttpsProtocol,
   hasFtpProtocol,
   hasHttpProtocol,
   hasHttpsProtocol,
@@ -85,5 +88,16 @@ exports.hasProtocol = describe(
         );
       }
     );
+  }
+);
+
+exports.addFtpProtocol = describe(
+  mInformation('Tests for the URLs module'),
+  () => {
+    describe(mFYI('Testing add FtpProtocol method'), () => {
+      it(mWarning('Should pass'), () => {
+        expect(hasFtpProtocol(addFtpProtocol(url4))).to.equal(true);
+      });
+    });
   }
 );
